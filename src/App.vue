@@ -1,31 +1,39 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Toolbar></Toolbar>
     <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
+<script>
+  import Toolbar from "./components/Toolbar";
+  import Footer from "./components/Footer";
+
+  export default {
+    components: {
+      Footer,
+      Toolbar
+    }
+  };
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+  body {
+    padding: 0;
+    margin: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    min-width: 420px;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: auto;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  a {
+    text-decoration: none;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

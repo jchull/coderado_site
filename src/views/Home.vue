@@ -1,18 +1,13 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <denver-parallax></denver-parallax>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import DenverParallax from '@/components/denver-parallax/denver-parallax'
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
+  export default {
+    name: 'home',
+    components: {DenverParallax}
+  };
 </script>
